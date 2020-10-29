@@ -2065,8 +2065,8 @@ apply-decompsed-lambda
 (defun evaluate-list(S-expressions a-list)
   (cond ((null S-expressions) nil) ; no more S-expressions to evaluate
     (t (cons
-          (evaluate (car S-expressions)) ; evaluate first S-Expression
-          (evaluate-list (cdr S-expressions)))))) ; recursive call on remainder
+          (evaluate (car S-expressions) a-list) ; evaluate first S-Expression
+          (evaluate-list (cdr S-expressions) a-list))))) ; recursive call on remainder
 \end{KERNEL}
 
 \vfill
